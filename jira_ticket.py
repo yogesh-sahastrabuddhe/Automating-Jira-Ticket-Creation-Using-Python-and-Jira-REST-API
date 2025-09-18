@@ -8,7 +8,7 @@ import json
 load_dotenv()
 
 # Jira configuration from environment variables
-JIRA_URL = "https://yashwardhansahu.atlassian.net/rest/api/3/issue"
+JIRA_URL = "https://your-domain.atlassian.net/rest/api/3/issue" #just change your domain with your user name other keep it as it is
 EMAIL = os.getenv("JIRA_EMAIL")
 API_TOKEN = os.getenv("JIRA_API_TOKEN")
 PROJECT_KEY = os.getenv("JIRA_PROJECT_KEY")
@@ -79,4 +79,5 @@ if __name__ == "__main__":
     summary = "Server CPU Usage Exceeded Threshold"
     description = "The CPU usage on production server exceeded 90%. Please investigate."
     
+
     create_jira_ticket(summary, description)
